@@ -1,0 +1,101 @@
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg,#081229,#111d4a);
+    color:white;
+    min-height:100vh;
+}
+
+.company-page{
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px;
+}
+
+/* HERO SECTION*/
+
+.company-hero{
+    background: linear-gradient(
+        135deg,
+        rgba(255,153,0,0.15),
+        rgba(19,27,77,0.9)
+    );
+    text-align:center;
+    border:1px solid rgba(255,153,0,0.3);
+    border-radius:24px;
+    padding:40px;
+    margin-bottom:40px;
+}
+
+.company-hero h1{
+    font-size:56px;
+    margin-bottom:15px;
+}
+
+.company-hero p{
+    color:#b8c1ec;
+    max-width:700px;
+    margin:auto;
+}
+
+/* CARDS */
+
+.company-card{
+    background: rgba(17,29,74,0.9);
+    border:1px solid rgba(139,92,246,0.25);
+    border-radius:20px;
+    padding:25px;
+    min-height:220px;
+    transition:0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.company-card:hover{
+    transform: translateY(-5px);
+    border-color:#8b5cf6;
+    box-shadow:0 10px 25px rgba(139,92,246,0.3);
+}
+
+.company-card h2{
+    margin-bottom:15px;
+}
+
+.company-card ul,.companies-card ol{
+    padding-left:20px;
+}
+
+
+/* GRID */
+
+.content-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+/* LINKS */
+
+.company-link{
+    text-decoration:none;
+    color:white;
+}
+
+.company-link h2{
+    color:#8b5cf6;
+    margin-bottom:10px;
+}
+
+.company-link p{
+    color:#b8c1ec;
+    line-height:1.6;
+}
+
+/* BACK LINK */
+
+.back-link{
+    display:inline-block;
+    margin-bottom:40px;
+    color:#8b5cf6;
+    text-decoration:none;
+    font-weight:600;
+}
