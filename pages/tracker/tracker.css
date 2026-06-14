@@ -1,0 +1,73 @@
+.tracker {
+    min-height: 100vh;
+    background: #0f172a;
+    padding: 80px 80px;
+    color: white;
+}
+
+.tracker h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.tracker > p {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 60px;
+}
+
+.progress-card {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.progress-card h2 {
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #1e293b;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-fill {
+    width: 48%;
+    height: 100%;
+    background: #8b5cf6;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.topic-card {
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-8px);
+}
+
+.topic-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
