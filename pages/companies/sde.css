@@ -16,7 +16,7 @@ body{
 }
 
 /* WATERMARK */
-.amazon-watermark{
+.company-watermark{
 
     position:absolute;
     bottom:-40px;
@@ -39,6 +39,7 @@ body{
     font-size:14px;
     font-weight:600;
 }
+
 
 .hero-content h1{
     margin-top:25px;
@@ -368,175 +369,6 @@ body{
     line-height:1.7;
 }
 
-/*LEADERSHIP PRINCIPLES*/
-
-.principles-section{
-
-    max-width:1200px;
-    margin:140px auto;
-
-    padding:0 40px;
-}
-
-.bento-grid{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr;
-
-    gap:20px;
-}
-
-.bento{
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(15,23,42,.95),
-        rgba(30,41,59,.95)
-    );
-
-    border:
-    1px solid rgba(139,92,246,.15);
-
-    border-radius:28px;
-
-    padding:35px;
-
-    transition:.3s;
-}
-
-.bento:hover{
-
-    transform:translateY(-5px);
-
-    border-color:
-    rgba(139,92,246,.35);
-}
-
-.large{
-
-    min-height:280px;
-}
-
-.bento h3{
-
-    color:white;
-
-    font-size:26px;
-
-    margin-bottom:15px;
-}
-
-.bento p{
-
-    color:#94a3b8;
-
-    line-height:1.8;
-}
-
-/*FOR BETTER LAYOUT*/
-
-.bento:nth-child(2){
-    min-height:130px;
-}
-
-.bento:nth-child(3){
-    min-height:130px;
-}
-
-.bento:nth-child(4){
-    min-height:130px;
-}
-
-.bento:nth-child(5){
-    min-height:130px;
-}
-
-.bento:nth-child(6){
-    min-height:130px;
-}
-
-/*QUESTIONS*/
-
-.questions-section{
-
-    max-width:1100px;
-
-    margin:140px auto;
-
-    padding:0 40px;
-}
-
-.question-table{
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(15,23,42,.95),
-        rgba(30,41,59,.95)
-    );
-
-    border:
-    1px solid rgba(139,92,246,.15);
-
-    border-radius:28px;
-
-    overflow:hidden;
-}
-
-.row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:24px 30px;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.05);
-
-    transition:.3s;
-}
-
-.row:last-child{
-    border-bottom:none;
-}
-
-.row:hover{
-
-    background:
-    rgba(139,92,246,.05);
-}
-
-.row span:first-child{
-
-    color:white;
-
-    font-size:18px;
-}
-
-.easy{
-
-    color:#22c55e;
-    font-weight:600;
-}
-
-.medium{
-
-    color:#f59e0b;
-    font-weight:600;
-}
-
-.hard{
-
-    color:#ef4444;
-    font-weight:600;
-}
-
-/*EXTRA*/
 
 /* LEADERSHIP PRINCIPLES */
 
@@ -707,5 +539,159 @@ body{
         width:180px;
         height:180px;
         font-size:26px;
+    }
+}
+
+/* QUESTIONS SECTION */
+
+.questions-section{
+    max-width:1300px;
+    margin:auto;
+    padding:20px 40px 130px;
+}
+
+.questions-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.questions-header span{
+    color:#8b5cf6;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.questions-header h2{
+    color:white;
+    font-size:64px;
+    margin-top:18px;
+}
+
+.questions-header p{
+    color:#94a3b8;
+    margin-top:15px;
+    font-size:18px;
+}
+
+/* GRID */
+
+.difficulty-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* CARD */
+
+.difficulty-card{
+    position:relative;
+    padding:35px;
+    border-radius:28px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(15,23,42,.95),
+        rgba(30,41,59,.95)
+    );
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+/* GLOW */
+
+.difficulty-card::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    top:-120px;
+    right:-120px;
+    border-radius:50%;
+    filter:blur(20px);
+}
+
+/* EASY */
+
+.easy-card::before{
+    background:rgba(34,197,94,.12);
+}
+
+.easy-card h3{
+    color:#22c55e;
+}
+
+/* MEDIUM */
+
+.medium-card::before{
+    background:rgba(251,191,36,.12);
+}
+
+.medium-card h3{
+    color:#fbbf24;
+}
+
+/* HARD */
+
+.hard-card::before{
+    background:rgba(239,68,68,.12);
+}
+
+.hard-card h3{
+    color:#ef4444;
+}
+
+/* TOP */
+
+.difficulty-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.difficulty-top h3{
+    font-size:32px;
+}
+
+.difficulty-top span{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* LIST */
+
+.difficulty-card ul{
+    list-style:none;
+}
+
+.difficulty-card ul li{
+    color:#e2e8f0;
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.difficulty-card ul li:last-child{
+    border-bottom:none;
+}
+
+.difficulty-card ul li:hover{
+    color:white;
+    transform:translateX(8px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .difficulty-grid{
+        grid-template-columns:1fr;
+    }
+
+    .questions-header h2{
+        font-size:48px;
     }
 }
