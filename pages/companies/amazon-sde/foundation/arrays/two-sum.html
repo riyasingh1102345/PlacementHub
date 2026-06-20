@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./two-sum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<!--QUESTIONS-->
+
+        <div class="practice-section">
+
+    <h3>Your Solution</h3>
+
+    <textarea
+        id="userAnswer"
+        class="answer-box"
+        placeholder="Write your approach or code here...">
+    </textarea>
+
+    <button id="checkBtn" class="check-btn">
+        Check Answer
+    </button>
+
+    <div id="feedback" class="feedback-box"></div>
+
+    <button id="solutionBtn" class="solution-btn">
+        Show Solution
+    </button>
+
+</div>
+
+
+<div id="solutionSection" class="solution-section">
+
+    <div class="info-box">
+
+        <h4>Hint</h4>
+
+        <p>
+            Use a HashMap to store previously visited values.
+        </p>
+
+    </div>
+
+    <div class="info-box">
+
+        <h4>Optimal Approach</h4>
+
+        <p>
+            Traverse the array once and check if the complement
+            already exists in the HashMap.
+        </p>
+
+    </div>
+
+    <div class="info-box">
+
+        <h4>Java Solution</h4>
+
+<pre>
+<code>
+public int[] twoSum(int[] nums, int target){
+
+    HashMap<Integer,Integer> map =
+    new HashMap<>();
+
+    for(int i=0;i<nums.length;i++){
+
+        int diff = target - nums[i];
+
+        if(map.containsKey(diff)){
+            return new int[]{
+                map.get(diff),
+                i
+            };
+        }
+
+        map.put(nums[i],i);
+    }
+
+    return new int[]{};
+}
+</code>
+</pre>
+
+    </div>
+
+</div>
+
+<script>
+
+      const buttons =
+document.querySelectorAll(".toggle-btn");
+
+buttons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const solution =
+        button.parentElement.parentElement
+        .querySelector(".solution-content");
+
+        solution.classList.toggle("active");
+
+        button.textContent =
+        solution.classList.contains("active")
+        ? "Hide Solution"
+        : "Show Solution";
+
+    });
+
+});
+
+</script>
+</body>
+</html>

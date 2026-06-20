@@ -1,166 +1,257 @@
 const roadmapData = [
 
 {
-step:"STEP 01 OF 07",
-title:"Master The Skills Amazon Actually Tests",
-desc:"Build strong DSA and CS fundamentals.",
+    step:"STEP 01 OF 07",
 
-skills:[
-"Arrays & Strings",
-"Trees & Graphs",
-"Dynamic Programming",
-"Core CS Subjects"
-],
+    title:"Master the skills Amazon actually tests.",
 
-ready:"You can solve medium problems comfortably.",
+    badges:[
+    "5-6 Weeks",
+    "High Priority",
+    "Foundation"
+    ],
 
-page:"essential-skills.html"
+    desc:"Build speed and depth across core data structures, algorithms and CS fundamentals.",
+
+    skills:[
+        "DSA Patterns",
+        "CS Fundamentals",
+        "Code Quality",
+        "Complexity Analysis"
+    ],
+
+    page:"foundation.html",
+
+    ready:"You can solve medium problems confidently."
 },
 
 {
-step:"STEP 02 OF 07",
-title:"Build An ATS Friendly Resume",
-desc:"Create a resume that gets shortlisted.",
+    step:"STEP 02 OF 07",
 
-skills:[
-"Resume Format",
-"Projects",
-"Achievements",
-"ATS Keywords"
-],
+    title:"Build an ATS friendly resume.",
 
-ready:"Resume score should be 80+.",
+    badges:[
+    "2-3 Days",
+    "ATS Ready",
+    "Resume"
+    ],
 
-page:"resume-preparation.html"
+    desc:"Craft a resume that gets shortlisted by recruiters and hiring managers.",
+
+    skills:[
+        "Resume Format",
+        "Projects Section",
+        "Achievements",
+        "ATS Keywords"
+    ],
+
+     page:"resume.html",
+
+    ready:"Your resume clearly highlights impact."
 },
 
 {
-step:"STEP 03 OF 07",
-title:"Application Strategy",
-desc:"Apply through referrals and portals.",
+    step:"STEP 03 OF 07",
 
-skills:[
-"LinkedIn",
-"Referrals",
-"Career Pages",
-"Cold Outreach"
+    title:"Application strategy.",
+
+    badges:[
+    "1 Week",
+    "Networking",
+    "Applications"
 ],
 
-ready:"You are applying consistently every week.",
+    desc:"Apply through referrals, career portals and networking channels.",
 
-page:"application-process.html"
+    skills:[
+        "LinkedIn",
+        "Referrals",
+        "Career Pages",
+        "Cold Outreach"
+    ],
+
+    page:"application.html",
+
+    ready:"You are applying consistently every week."
 },
 
 {
-step:"STEP 04 OF 07",
-title:"Coding Interview Preparation",
-desc:"Practice Amazon-style coding rounds.",
+    step:"STEP 04 OF 07",
 
-skills:[
-"Blind 75",
-"Amazon OA",
-"Mock Interviews",
-"Patterns"
+    title:"Coding interview preparation.",
+
+    badges:[
+    "3-4 Weeks",
+    "DSA Focus",
+    "Coding Rounds"
 ],
 
-ready:"You solve medium questions in under 30 mins.",
+    desc:"Prepare company-focused DSA questions and mock interviews.",
 
-page:"coding-interview.html"
+    skills:[
+        "Arrays",
+        "Trees",
+        "Graphs",
+        "Dynamic Programming"
+    ],
+
+     page:"coding-interview.html",
+
+    ready:"You can solve medium-hard problems confidently."
 },
 
 {
-step:"STEP 05 OF 07",
-title:"Leadership Principles",
-desc:"Prepare STAR format answers.",
+    step:"STEP 05 OF 07",
 
-skills:[
-"Customer Obsession",
-"Ownership",
-"Dive Deep",
-"Bias For Action"
+    title:"Leadership principles.",
+
+    badges:[
+    "4-5 Days",
+    "Behavioral",
+    "Leadership"
 ],
 
-ready:"You have 2 stories per principle.",
+    desc:"Prepare STAR stories around Amazon's leadership principles.",
 
-page:"leadership-principles.html"
+    skills:[
+        "Ownership",
+        "Customer Obsession",
+        "Dive Deep",
+        "Bias For Action"
+    ],
+ 
+     page:"leadership.html",
+
+    ready:"You have stories for every principle."
 },
 
 {
-step:"STEP 06 OF 07",
-title:"System Design",
-desc:"Learn HLD and LLD concepts.",
+    step:"STEP 06 OF 07",
 
-skills:[
-"Scalability",
-"Databases",
-"Caching",
-"APIs"
+    title:"System design fundamentals.",
+
+    badges:[
+    "2 Weeks",
+    "Scalability",
+    "System Design"
 ],
 
-ready:"You can design basic systems.",
+    desc:"Learn scalable systems and architecture basics.",
 
-page:"system-design.html"
+    skills:[
+        "Caching",
+        "Databases",
+        "Load Balancing",
+        "Microservices"
+    ],
+
+      page:"system-design.html",
+
+    ready:"You can explain design tradeoffs."
 },
 
 {
-step:"STEP 07 OF 07",
-title:"Offer & Negotiation",
-desc:"Handle compensation discussions.",
+    step:"STEP 07 OF 07",
 
-skills:[
-"CTC Breakdown",
-"Negotiation",
-"Joining",
-"Benefits"
+    title:"Offer and negotiation.",
+
+    badges:[
+    "1-2 Days",
+    "Compensation",
+    "Negotiation"
 ],
 
-ready:"You understand compensation structure.",
+    desc:"Understand compensation and negotiate confidently.",
 
-page:"offer-negotiation.html"
+    skills:[
+        "CTC Breakdown",
+        "Negotiation",
+        "Benefits",
+        "Joining Decisions"
+    ],
+
+    page:"negotiation.html",
+
+    ready:"You can evaluate multiple offers."
 }
-
 ];
 
+const badge1 =
+document.getElementById("badge1");
+
+const badge2 =
+document.getElementById("badge2");
+
+const badge3 =
+document.getElementById("badge3");
+
 const steps = document.querySelectorAll(".step");
+
+const stepTag = document.getElementById("stepTag");
+
+const contentTitle =
+document.getElementById("contentTitle");
+
+const contentDesc =
+document.getElementById("contentDesc");
+
+const skillsGrid =
+document.getElementById("skillsGrid");
+
+const readyBox =
+document.getElementById("readyBox");
+
+const exploreLink = document.getElementById("exploreLink");
+
+
 
 steps.forEach((step,index)=>{
 
     step.addEventListener("click",()=>{
 
-        steps.forEach(btn=>{
-            btn.classList.remove("active");
-        });
+        document
+        .querySelector(".step.active")
+        ?.classList.remove("active");
 
         step.classList.add("active");
 
         const data = roadmapData[index];
 
-        document.querySelector(".step-number").textContent =
+        stepTag.textContent =
         data.step;
 
-        document.querySelector(".detail-title").textContent =
+        contentTitle.textContent =
         data.title;
 
-        document.querySelector(".detail-desc").textContent =
+        contentDesc.textContent =
         data.desc;
 
-        document.querySelector(".skill1").textContent =
-        data.skills[0];
+        readyBox.textContent =
+        "READY WHEN: " + data.ready;
 
-        document.querySelector(".skill2").textContent =
-        data.skills[1];
+        badge1.textContent =
+        data.badges[0];
 
-        document.querySelector(".skill3").textContent =
-        data.skills[2];
+        badge2.textContent =
+        data.badges[1];
 
-        document.querySelector(".skill4").textContent =
-        data.skills[3];
+        badge3.textContent =
+        data.badges[2];
 
-        document.querySelector(".ready-text").textContent =
-        data.ready;
+        exploreLink.href = data.page;
 
-        document.getElementById("detailsBtn").href =
-        data.page;
+        skillsGrid.innerHTML = "";
+
+        data.skills.forEach(skill=>{
+
+            skillsGrid.innerHTML += `
+                <div class="skill-card">
+                    ${skill}
+                </div>
+            `;
+
+        });
+
     });
 
 });
