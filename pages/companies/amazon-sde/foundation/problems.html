@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROBLEM</title>
+
+    <link rel="stylesheet" href="./css/problems.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+
+    <section class="question-hero">
+
+        <a href="../problems.html" class="back-btn">
+            ← Back to Arrays
+        </a>
+
+        <div class="hero-content">
+
+            <div class="hero-left">
+
+                <div class="question-tags" id="question-tags"></div>
+
+                <h1 id="question-title"></h1>
+
+                <p id="hero-description"></p>
+
+            </div>
+
+            <div class="hero-right">
+                <div class="progress-card">
+                    <span class="progress-heading">
+                        Your Progress
+                    </span>
+                    <h2>0 / 10</h2>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p>Arrays & Strings Module</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Companies -->
+
+        <div class="company-section">
+
+            <span class="company-title">
+                Asked In
+            </span>
+
+            <div class="company-list" id="company-list"></div>
+
+        </div>
+
+        <!-- Stats -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <span>Pattern</span>
+                <h3>HashMap</h3>
+            </div>
+
+            <div class="stat-card">
+                <span>Difficulty</span>
+                <h3>Easy</h3>
+            </div>
+
+            <div class="stat-card">
+                <span>Time</span>
+                <h3>15-20 min</h3>
+            </div>
+
+            <div class="stat-card">
+                <span>Acceptance</span>
+                <h3>55%</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--LEFT PANEL-->
+
+     <section class="problem-layout">
+
+        <div class="left-panel">
+        <h3>Problem Statement</h3>
+
+        <p id="problem-statement"></p>
+
+        <h3>Example 1</h3>
+            <div class="code-box">
+                <pre id="example1"></pre>
+            </div>
+
+        <h3>Example 2</h3>
+            <div class="code-box">
+                <pre id="example2"></pre>
+
+        </div>
+
+        <h3>Constraints</h3>
+
+        <div class="code-box">
+            <pre id="constraints"></pre>
+        </div>
+    
+
+    <div id="hints-container"></div>
+
+<details>
+    <summary>⚡ Brute Force Approach</summary>
+    <p>
+        Use two nested loops to check every possible pair.
+        If nums[i] + nums[j] equals target, return their indices.
+    </p>
+</details>
+
+<details>
+    <summary>🚀 Optimal Approach</summary>
+    <p>
+        Use a HashMap to store each number and its index.
+        For every element, check whether
+        target - nums[i]
+        already exists in the HashMap.
+        This reduces the time complexity to O(n).
+    </p>
+</details>
+
+<details>
+    <summary>📈 Time & Space Complexity</summary>
+    
+        <p id="time-complexity"></p>
+        <p id="space-complexity"></p>
+    
+</details>
+
+</div>
+
+        <!--RIGHT PANEL-->
+
+        <div class="right-panel">
+
+    <div class="editor-header">
+
+        <h3>Practice Area</h3>
+
+        <select id="language">
+    <option value="java" selected>Java</option>
+    <option value="cpp" disabled>C++ (Coming Soon)</option>
+    <option value="python" disabled>Python (Coming Soon)</option>
+    <option value="javascript" disabled>JavaScript (Coming Soon)</option>
+</select>
+
+    </div>
+
+    <textarea placeholder="// Write your Java code here..."></textarea>
+
+    <div class="editor-buttons">
+
+        <button class="run-btn">Run Code</button>
+
+        <button class="submit-btn">Submit</button>
+
+        <button class="solution-btn">View Solution</button>
+
+    </div>
+
+</div>
+</section>
+
+        <script src="./data/arrays-data.js"></script>
+        <script src="./js/problems.js"></script>
+
+</body>
+</html>
