@@ -35,7 +35,7 @@ ${question.example1.output}
 Explanation:
 ${question.example1.explanation}`;
 
-document.getElementById("example1").textContent = `Input:
+document.getElementById("example2").textContent = `Input:
 ${question.example2.input}
 Output:
 ${question.example2.output}
@@ -56,3 +56,21 @@ question.hints.forEach(function(hint) {
     </details>
     `;
 });
+
+const bruteForce = document.getElementById("brute-force");
+
+bruteForce.innerHTML = `
+<details>
+    <summary>⚡ ${question.bruteForce.title}</summary>
+    <p>${question.bruteForce.description}</p>
+</details>
+`;
+
+const optimalApproach = document.getElementById("optimal-approach");
+
+optimalApproach.innerHTML = `
+<details>
+    <summary>🚀 ${question.optimalApproach.title}</summary>
+    <p>${question.optimalApproach.description}</p>
+</details>
+`;

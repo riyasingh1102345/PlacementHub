@@ -35,5 +35,77 @@ const arrayQuestions = [
         "A HashMap can store visited numbers.",
         "For every element, check if target - current exists in the HashMap."
     ],
+
+    bruteForce: {
+    title: "Brute Force Approach",
+    description: "Use two nested loops to check every possible pair. If nums[i] + nums[j] equals target, return their indices.",
+},
+    optimalApproach: {
+    title: "Optimal Approach",
+    description: "Use a HashMap to store previously seen numbers. For every element, calculate the complement (target - current element). If the complement already exists in the map, return the indices. Otherwise, store the current element in the HashMap and continue traversing the array. This reduces the time complexity from O(n²) to O(n)."
+},
+},
+
+{
+    id: "contains-duplicate",
+
+    title: "Contains Duplicate",
+
+    heroDescription: "Master one of the simplest HashSet problems and learn how to efficiently detect duplicate elements in an array.",
+
+    problemStatement: "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+
+    difficulty: "Easy",
+
+    tags: [
+        "Array",
+        "HashSet"
+    ],
+
+    companies: [
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Adobe",
+        "Meta"
+    ],
+
+    example1: {
+        input: "nums = [1,2,3,1]",
+        output: "true",
+        explanation: "The element 1 appears twice."
+    },
+
+    example2: {
+        input: "nums = [1,2,3,4]",
+        output: "false",
+        explanation: "Every element is unique."
+    },
+
+    constraints: `
+1 <= nums.length <= 10⁵
+-10⁹ <= nums[i] <= 10⁹
+`,
+
+    timeComplexity: "O(n)",
+
+    spaceComplexity: "O(n)",
+
+    hints: [
+        "Think about how you can quickly check whether you've already seen a number.",
+        "A HashSet stores only unique values.",
+        "If an element already exists in the HashSet, return true immediately."
+    ],
+
+    bruteForce: {
+        title: "Brute Force Approach",
+        description: "Compare every element with every other element using two nested loops. If any pair of equal elements is found, return true. Otherwise, return false after checking all pairs."
+    },
+
+    optimalApproach: {
+        title: "Optimal Approach",
+        description: "Traverse the array once while maintaining a HashSet. If the current element already exists in the HashSet, return true. Otherwise, insert it into the set and continue. If the traversal finishes without finding duplicates, return false."
+    }
 }
+
 ];
