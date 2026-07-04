@@ -402,6 +402,23 @@ details p{
     padding:20px;
 }
 
+.complete-btn{
+    margin-top:20px;
+    padding:14px 24px;
+    border:none;
+    border-radius:12px;
+    background:#8b5cf6;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.complete-btn:hover{
+    background:#7c3aed;
+}
+
 .editor-header{
     display:flex;
     justify-content:space-between;

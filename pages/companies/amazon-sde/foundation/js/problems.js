@@ -9,6 +9,28 @@ console.log(id);
 const question = arrayQuestions.find(q => q.id === id);
 console.log(question);
 
+const completeBtn = document.getElementById("complete-btn");
+
+completeBtn.addEventListener("click", function () {
+
+    let completedQuestions =
+        JSON.parse(localStorage.getItem("completedQuestions")) || [];
+
+    if (!completedQuestions.includes(question.id)) {
+
+        completedQuestions.push(question.id);
+
+        localStorage.setItem(
+            "completedQuestions",
+            JSON.stringify(completedQuestions)
+        );
+
+        alert("Question marked as completed! 🎉");
+
+    }
+
+});
+
 const title = document.getElementById("question-title");
 title.textContent = question.title;
 

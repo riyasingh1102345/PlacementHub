@@ -1,4 +1,7 @@
-console.log(arrayQuestions);
+const completedQuestions =
+    JSON.parse(localStorage.getItem("completedQuestions")) || [];
+    
+    console.log(arrayQuestions);
 
 // Easy
 const beginner = arrayQuestions.filter(function(question){
@@ -22,8 +25,10 @@ function renderQuestions(questions, containerId){
 
     questions.forEach(function(question){
 
+        const isCompleted = completedQuestions.includes(question.id);
+
         container.innerHTML += `
-            <div class="question-card">
+            <div class="question-card ${isCompleted ? "completed" : ""}">
 
                 <h3>${question.title}</h3>
 
@@ -31,9 +36,11 @@ function renderQuestions(questions, containerId){
                     ${question.difficulty}
                 </span>
 
-                <a href="../problems.html?id=${question.id}">
-                    Solve →
-                </a>
+                ${
+                isCompleted
+                 ? `<p class="completed-text">✅ Completed</p>`
+                 : `<a href="../problems.html?id=${question.id}">Solve →</a>`
+            }
 
             </div>
         `;
@@ -46,3 +53,15 @@ function renderQuestions(questions, containerId){
 renderQuestions(beginner, "beginner-list");
 renderQuestions(intermediate, "intermediate-list");
 renderQuestions(advanced, "advanced-list");
+
+const progressCount = document.getElementById("progress-count");
+
+progressCount.textContent =
+    `${completedQuestions.length} / ${arrayQuestions.length} Questions`;
+
+const progressFill = document.getElementById("progress-fill");
+
+const progressPercentage =
+    (completedQuestions.length / arrayQuestions.length) * 100;
+
+progressFill.style.width = `${progressPercentage}%`;
