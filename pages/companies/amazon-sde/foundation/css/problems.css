@@ -511,3 +511,28 @@ details p{
     transform:translateY(-2px);
 }
 
+.problem-navigation{
+    display:flex;
+    justify-content:space-between;
+    margin-top:60px;
+    margin-bottom:80px;
+}
+
+.nav-btn{
+    padding:14px 24px;
+    border-radius:12px;
+    background:#1b2335;
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:#7c3aed;
+}
+
+.nav-btn.hidden{
+    visibility:hidden;
+}
+

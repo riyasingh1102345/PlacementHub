@@ -1,20 +1,20 @@
 const completedQuestions =
     JSON.parse(localStorage.getItem("completedQuestions")) || [];
     
-    console.log(arrayQuestions);
+    console.log(stringsQuestions);
 
 // Easy
-const beginner = arrayQuestions.filter(function(question){
+const beginner = stringsQuestions.filter(function(question){
     return question.difficulty === "Easy";
 });
 
 // Medium
-const intermediate = arrayQuestions.filter(function(question){
+const intermediate = stringsQuestions.filter(function(question){
     return question.difficulty === "Medium";
 });
 
 // Hard
-const advanced = arrayQuestions.filter(function(question){
+const advanced = stringsQuestions.filter(function(question){
     return question.difficulty === "Hard";
 });
 
@@ -124,11 +124,11 @@ searchInput.addEventListener("input", function () {
 const progressCount = document.getElementById("progress-count");
 
 progressCount.textContent =
-    `${completedQuestions.length} / ${arrayQuestions.length} Questions`;
+    `${completedQuestions.length} / ${stringsQuestions.length} Questions`;
 
 const progressFill = document.getElementById("progress-fill");
 
 const progressPercentage =
-    (completedQuestions.length / arrayQuestions.length) * 100;
+    (completedQuestions.length / stringsQuestions.length) * 100;
 
 progressFill.style.width = `${progressPercentage}%`;

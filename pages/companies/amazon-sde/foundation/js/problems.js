@@ -11,23 +11,38 @@ console.log(question);
 
 const completeBtn = document.getElementById("complete-btn");
 
+let completedQuestions =
+    JSON.parse(localStorage.getItem("completedQuestions")) || [];
+
+// Page load pe sirf button ka text set karo
+if (completedQuestions.includes(question.id)) {
+    completeBtn.textContent = "❌ Mark as Incomplete";
+} else {
+    completeBtn.textContent = "✅ Mark as Completed";
+}
+
+
 completeBtn.addEventListener("click", function () {
 
-    let completedQuestions =
-        JSON.parse(localStorage.getItem("completedQuestions")) || [];
+    if (completedQuestions.includes(question.id)) {
 
-    if (!completedQuestions.includes(question.id)) {
+        completedQuestions = completedQuestions.filter(function(id) {
+            return id !== question.id;
+        });
+
+        completeBtn.textContent = "✅ Mark as Completed";
+
+    } else {
 
         completedQuestions.push(question.id);
 
-        localStorage.setItem(
-            "completedQuestions",
-            JSON.stringify(completedQuestions)
-        );
-
-        alert("Question marked as completed! 🎉");
-
+        completeBtn.textContent = "❌ Mark as Incomplete";
     }
+
+    localStorage.setItem(
+        "completedQuestions",
+        JSON.stringify(completedQuestions)
+    );
 
 });
 
@@ -96,3 +111,38 @@ optimalApproach.innerHTML = `
     <p>${question.optimalApproach.description}</p>
 </details>
 `;
+
+const currentIndex = arrayQuestions.findIndex(function(q){
+    return q.id === id;
+});
+
+const previousBtn = document.getElementById("previous-btn");
+const nextBtn = document.getElementById("next-btn");
+
+if(currentIndex > 0){
+
+        previousBtn.href = `problems.html?id=${arrayQuestions[currentIndex - 1].id}`;
+
+    previousBtn.textContent =
+        `← ${arrayQuestions[currentIndex - 1].title}`;
+
+}
+else{
+
+    previousBtn.classList.add("hidden");
+
+}
+
+if(currentIndex < arrayQuestions.length - 1){
+ 
+nextBtn.href =`problems.html?id=${arrayQuestions[currentIndex + 1].id}`;
+
+    nextBtn.textContent =
+        `${arrayQuestions[currentIndex + 1].title} →`;
+
+}
+else{
+
+    nextBtn.classList.add("hidden");
+
+}
