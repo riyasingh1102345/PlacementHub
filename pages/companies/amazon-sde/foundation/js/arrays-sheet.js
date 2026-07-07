@@ -39,12 +39,12 @@ ${
     isCompleted
     ? `
         <p class="completed-text">✅ Completed</p>
-        <a href="../problems.html?id=${question.id}" class="solve-again">
+        <a href="../problems.html?module=arrays&id=${question.id}" class="solve-again">
             Solve Again →
         </a>
       `
     : `
-        <a href="../problems.html?id=${question.id}">
+        <a href="../problems.html?module=arrays&id=${question.id}">
             Solve →
         </a>
       `

@@ -13,7 +13,7 @@ body{
 /* Foundation Grid */
 
 .foundation-grid{
-    max-width:1400px;
+    max-width:auto;
     margin:70px auto;
 
     display:grid;

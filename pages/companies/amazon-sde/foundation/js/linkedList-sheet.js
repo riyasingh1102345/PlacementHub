@@ -1,20 +1,20 @@
 const completedQuestions =
     JSON.parse(localStorage.getItem("completedQuestions")) || [];
     
-    console.log(stringsQuestions);
+    console.log(linkedListQuestions);
 
 // Easy
-const beginner = stringsQuestions.filter(function(question){
+const beginner = linkedListQuestions.filter(function(question){
     return question.difficulty === "Easy";
 });
 
 // Medium
-const intermediate = stringsQuestions.filter(function(question){
+const intermediate = linkedListQuestions.filter(function(question){
     return question.difficulty === "Medium";
 });
 
 // Hard
-const advanced = stringsQuestions.filter(function(question){
+const advanced = linkedListQuestions.filter(function(question){
     return question.difficulty === "Hard";
 });
 
@@ -39,12 +39,12 @@ ${
     isCompleted
     ? `
         <p class="completed-text">✅ Completed</p>
-        <a href="../problems.html?module=strings&id=${question.id}" class="solve-again">
+        <a href="../problems.html?module=linkedList&id=${question.id}" class="solve-again">
             Solve Again →
         </a>
       `
     : `
-        <a href="../problems.html?module=strings&id=${question.id}">
+        <a href="../problems.html?module=linkedList&id=${question.id}">
             Solve →
         </a>
       `
@@ -124,11 +124,11 @@ searchInput.addEventListener("input", function () {
 const progressCount = document.getElementById("progress-count");
 
 progressCount.textContent =
-    `${completedQuestions.length} / ${stringsQuestions.length} Questions`;
+    `${completedQuestions.length} / ${linkedListQuestions.length} Questions`;
 
 const progressFill = document.getElementById("progress-fill");
 
 const progressPercentage =
-    (completedQuestions.length / stringsQuestions.length) * 100;
+    (completedQuestions.length / linkedListQuestions.length) * 100;
 
 progressFill.style.width = `${progressPercentage}%`;

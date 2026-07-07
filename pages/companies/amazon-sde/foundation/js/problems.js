@@ -1,12 +1,29 @@
-console.log(arrayQuestions);
-
 const params = new URLSearchParams(window.location.search);
 console.log(params);
 
 const id = params.get("id");
 console.log(id);
 
-const question = arrayQuestions.find(q => q.id === id);
+const module = params.get("module");
+
+let questions;
+
+if (module === "arrays") {
+    questions = arrayQuestions;
+}
+else if (module === "strings") {
+    questions = stringsQuestions;
+}
+else if (module === "linkedList") {
+    questions = linkedListQuestions;
+}
+
+const question = questions.find(q => q.id === id);
+console.log(question);
+
+console.log(module);
+console.log(id);
+console.log(questions);
 console.log(question);
 
 const completeBtn = document.getElementById("complete-btn");
@@ -52,11 +69,14 @@ title.textContent = question.title;
 document.getElementById("question-title").textContent = question.title;
 document.getElementById("hero-description").textContent = question.heroDescription;
 
+
 const tagsContainer = document.getElementById("question-tags");
 tagsContainer.innerHTML = `<span class="tag easy">${question.difficulty}</span>`;
-question.tags.forEach(tag => {
-    tagsContainer.innerHTML += `<span class="tag">${tag}</span>`;
-});
+
+document.getElementById("pattern").textContent = question.pattern;
+document.getElementById("difficulty").textContent = question.difficulty;
+document.getElementById("time").textContent = question.time;
+document.getElementById("acceptance").textContent = question.acceptance;
 
 document.getElementById("problem-statement").textContent = question.problemStatement;
 
@@ -112,7 +132,7 @@ optimalApproach.innerHTML = `
 </details>
 `;
 
-const currentIndex = arrayQuestions.findIndex(function(q){
+const currentIndex = questions.findIndex(function(q){
     return q.id === id;
 });
 
@@ -121,10 +141,11 @@ const nextBtn = document.getElementById("next-btn");
 
 if(currentIndex > 0){
 
-        previousBtn.href = `problems.html?id=${arrayQuestions[currentIndex - 1].id}`;
+        previousBtn.href =
+`problems.html?module=${module}&id=${questions[currentIndex - 1].id}`;
 
     previousBtn.textContent =
-        `← ${arrayQuestions[currentIndex - 1].title}`;
+        `← ${questions[currentIndex - 1].title}`;
 
 }
 else{
@@ -133,12 +154,13 @@ else{
 
 }
 
-if(currentIndex < arrayQuestions.length - 1){
+if(currentIndex < questions.length - 1){
  
-nextBtn.href =`problems.html?id=${arrayQuestions[currentIndex + 1].id}`;
+nextBtn.href =
+`problems.html?module=${module}&id=${questions[currentIndex + 1].id}`;
 
     nextBtn.textContent =
-        `${arrayQuestions[currentIndex + 1].title} →`;
+        `${questions[currentIndex + 1].title} →`;
 
 }
 else{
