@@ -17,6 +17,9 @@ else if (module === "strings") {
 else if (module === "linkedList") {
     questions = linkedListQuestions;
 }
+else if (module === "stack") {
+    questions = stackQuestions;
+}
 
 const question = questions.find(q => q.id === id);
 console.log(question);
