@@ -20,6 +20,9 @@ else if (module === "linkedList") {
 else if (module === "stack") {
     questions = stackQuestions;
 }
+else if (module === "queue") {
+    questions = queueQuestions;
+}
 
 const question = questions.find(q => q.id === id);
 console.log(question);
