@@ -1,20 +1,20 @@
 const completedQuestions =
     JSON.parse(localStorage.getItem("completedQuestions")) || [];
     
-    console.log(graphsQuestions);
+    console.log(greedyQuestions);
 
 // Easy
-const beginner = graphsQuestions.filter(function(question){
+const beginner = greedyQuestions.filter(function(question){
     return question.difficulty === "Easy";
 });
 
 // Medium
-const intermediate = graphsQuestions.filter(function(question){
+const intermediate = greedyQuestions.filter(function(question){
     return question.difficulty === "Medium";
 });
 
 // Hard
-const advanced = graphsQuestions.filter(function(question){
+const advanced = greedyQuestions.filter(function(question){
     return question.difficulty === "Hard";
 });
 
@@ -39,12 +39,12 @@ ${
     isCompleted
     ? `
         <p class="completed-text">✅ Completed</p>
-        <a href="../problems.html?module=graphs&id=${question.id}" class="solve-again">
+        <a href="../problems.html?module=greedy&id=${question.id}" class="solve-again">
             Solve Again →
         </a>
       `
     : `
-        <a href="../problems.html?module=graphs&id=${question.id}">
+        <a href="../problems.html?module=greedy&id=${question.id}">
             Solve →
         </a>
       `
@@ -124,14 +124,14 @@ searchInput.addEventListener("input", function () {
 const progressCount = document.getElementById("progress-count");
 
 progressCount.textContent =
-    `${completedQuestions.length} / ${graphsQuestions.length} Questions`;
+    `${completedQuestions.length} / ${greedyQuestions.length} Questions`;
 
 const progressFill = document.getElementById("progress-fill");
 
 const completedQueueQuestions =
     completedQuestions.filter(function(id){
 
-        return graphsQuestions.some(function(question){
+        return greedyQuestions.some(function(question){
 
             return question.id === id;
 
@@ -140,9 +140,9 @@ const completedQueueQuestions =
     });
 
 progressCount.textContent =
-`${completedQueueQuestions.length} / ${graphsQuestions.length} Questions`;
+`${completedQueueQuestions.length} / ${greedyQuestions.length} Questions`;
 
 const progressPercentage =
-(completedQueueQuestions.length / graphsQuestions.length) * 100;
+(completedQueueQuestions.length / greedyQuestions.length) * 100;
 
 progressFill.style.width = `${progressPercentage}%`;

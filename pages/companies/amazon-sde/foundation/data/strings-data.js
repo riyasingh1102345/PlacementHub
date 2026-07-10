@@ -32,6 +32,8 @@ const stringsQuestions = [
 
     acceptance: "65%",
 
+    amazonFrequency: "Very High",
+
     example1: {
 
         input:
@@ -133,6 +135,8 @@ s and t consist of lowercase English letters.`,
 
     acceptance: "52%",
 
+    amazonFrequency: "Very High",
+
     example1: {
 
         input:
@@ -228,6 +232,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "79%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: 's = ["h","e","l","l","o"]',
         output: '["o","l","l","e","h"]',
@@ -292,6 +298,8 @@ s consists of printable ASCII characters.`,
     time: "10-15 min",
 
     acceptance: "45%",
+
+    amazonFrequency: "High",
 
     example1: {
         input: 'strs = ["flower","flow","flight"]',
@@ -359,6 +367,8 @@ s consists of printable ASCII characters.`,
     time: "10-15 min",
 
     acceptance: "44%",
+
+    amazonFrequency: "Medium",
 
     example1: {
         input: 'haystack = "sadbutsad", needle = "sad"',
@@ -428,6 +438,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "36%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: 's = "abcabcbb"',
         output: "3",
@@ -470,17 +482,19 @@ s consists of printable ASCII characters.`,
 },
 
 {
-    id: "longest-substring-without-repeating-characters",
+    id: "group-anagrams",
 
-    title: "Longest Substring Without Repeating Characters",
+    title: "Group Anagrams",
 
     heroDescription:
-        "Master the Sliding Window technique to efficiently find the longest substring containing unique characters.",
+        "Master HashMap grouping by clustering strings that are anagrams of each other.",
 
     problemStatement:
-        "Given a string s, find the length of the longest substring without repeating characters.",
+        "Given an array of strings strs, group the anagrams together. You can return the answer in any order.",
 
     difficulty: "Medium",
+
+    amazonFrequency: "Very High",
 
     companies: [
         "Amazon",
@@ -490,50 +504,50 @@ s consists of printable ASCII characters.`,
         "Adobe"
     ],
 
-    pattern: "Sliding Window",
+    pattern: "HashMap + Sorting",
 
-    time: "15-20 min",
+    time: "20-25 min",
 
-    acceptance: "36%",
+    acceptance: "69%",
 
     example1: {
-        input: 's = "abcabcbb"',
-        output: "3",
+        input: 'strs = ["eat","tea","tan","ate","nat","bat"]',
+        output: '[["bat"],["nat","tan"],["ate","eat","tea"]]',
         explanation:
-            'The answer is "abc", with length 3.'
+            "Strings with the same sorted characters belong to the same group."
     },
 
     example2: {
-        input: 's = "bbbbb"',
-        output: "1",
+        input: 'strs = [""]',
+        output: '[[""]]',
         explanation:
-            'The answer is "b", with length 1.'
+            "An empty string forms its own anagram group."
     },
 
     constraints:
-        "0 <= s.length <= 5 × 10⁴\ns consists of English letters, digits, symbols and spaces.",
+        "1 <= strs.length <= 10⁴\n0 <= strs[i].length <= 100\nstrs[i] consists of lowercase English letters.",
 
-    timeComplexity: "O(n)",
+    timeComplexity: "O(n × k log k)",
 
-    spaceComplexity: "O(min(n, charset))",
+    spaceComplexity: "O(n × k)",
 
     hints: [
-        "Maintain a sliding window using two pointers.",
-        "Store the last occurrence of each character.",
-        "Move the left pointer whenever a duplicate is found.",
-        "Keep updating the maximum window size."
+        "Two anagrams have identical characters after sorting.",
+        "Use the sorted string as the HashMap key.",
+        "Store all original strings having the same key in one list.",
+        "Return all grouped values from the HashMap."
     ],
 
     bruteForce: {
-        title: "Brute Force Approach",
+        title: "Compare Every Pair",
         description:
-            "Generate every possible substring and check whether all characters are unique using a HashSet."
+            "Compare every string with every other string by checking whether they are anagrams. This approach is inefficient for large inputs."
     },
 
     optimalApproach: {
-        title: "Sliding Window + HashMap",
+        title: "HashMap + Sorted Key",
         description:
-            "Use two pointers to maintain a window of unique characters. Store each character's last index in a HashMap and adjust the left pointer whenever a duplicate is encountered."
+            "Sort every string and use the sorted version as the HashMap key. Strings sharing the same key belong to the same anagram group."
     }
 },
 
@@ -562,6 +576,8 @@ s consists of printable ASCII characters.`,
     time: "20-25 min",
 
     acceptance: "58%",
+
+    amazonFrequency: "High",
 
     example1: {
         input: 's = "ABAB", k = 2',
@@ -630,6 +646,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "35%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: 's = "babad"',
         output: '"bab"',
@@ -696,6 +714,8 @@ s consists of printable ASCII characters.`,
     time: "20-25 min",
 
     acceptance: "59%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: 's = "3[a]2[bc]"',
@@ -764,6 +784,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "44%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: 's = "ADOBECODEBANC", t = "ABC"',
         output: '"BANC"',
@@ -830,6 +852,8 @@ s consists of printable ASCII characters.`,
     time: "35-45 min",
 
     acceptance: "59%",
+
+    amazonFrequency: "Medium",
 
     example1: {
         input: 'word1 = "horse", word2 = "ros"',
@@ -898,6 +922,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "29%",
 
+    amazonFrequency: "Medium",
+
     example1: {
         input: 's = "aa", p = "a"',
         output: "false",
@@ -965,6 +991,8 @@ s consists of printable ASCII characters.`,
 
     acceptance: "30%",
 
+    amazonFrequency: "Medium",
+
     example1: {
         input: 's = "aa", p = "a"',
         output: "false",
@@ -1031,6 +1059,8 @@ s consists of printable ASCII characters.`,
     time: "35-45 min",
 
     acceptance: "48%",
+
+    amazonFrequency: "High",
 
     example1: {
         input: 'words = ["This","is","an","example","of","text","justification."], maxWidth = 16',

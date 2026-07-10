@@ -222,7 +222,7 @@ body::before{
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-top: 30px;
 }
@@ -267,7 +267,7 @@ body::before{
     }
 
     .stats{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
 }
@@ -275,9 +275,16 @@ body::before{
 @media(max-width:768px){
 
     .stats{
+        grid-template-columns:(2,1fr);
+    }
+
+@media(max-width:500px){
+
+    .stats{
         grid-template-columns:1fr;
     }
 
+}    
 }
 
 /*PROBLEM LAYOUT*/

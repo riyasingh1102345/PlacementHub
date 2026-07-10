@@ -128,7 +128,21 @@ progressCount.textContent =
 
 const progressFill = document.getElementById("progress-fill");
 
+const completedQueueQuestions =
+    completedQuestions.filter(function(id){
+
+        return stackQuestions.some(function(question){
+
+            return question.id === id;
+
+        });
+
+    });
+
+progressCount.textContent =
+`${completedQueueQuestions.length} / ${stackQuestions.length} Questions`;
+
 const progressPercentage =
-    (completedQuestions.length / stackQuestions.length) * 100;
+(completedQueueQuestions.length / stackQuestions.length) * 100;
 
 progressFill.style.width = `${progressPercentage}%`;

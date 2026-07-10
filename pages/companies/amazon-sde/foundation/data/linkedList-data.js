@@ -25,6 +25,8 @@ const linkedListQuestions = [
 
     acceptance: "78%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: "head = [1,2,3,4,5]",
         output: "[5,4,3,2,1]",
@@ -91,6 +93,8 @@ const linkedListQuestions = [
     time: "10-15 min",
 
     acceptance: "81%",
+
+    amazonFrequency: "High",
 
     example1: {
         input: "head = [1,2,3,4,5]",
@@ -159,6 +163,8 @@ const linkedListQuestions = [
 
     acceptance: "51%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: "head = [3,2,0,-4], pos = 1",
         output: "true",
@@ -225,6 +231,8 @@ const linkedListQuestions = [
     time: "10-15 min",
 
     acceptance: "66%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "list1 = [1,2,4], list2 = [1,3,4]",
@@ -293,6 +301,8 @@ const linkedListQuestions = [
 
     acceptance: "61%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: "intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5]",
         output: "Node with value 8",
@@ -359,6 +369,8 @@ const linkedListQuestions = [
     time: "20-25 min",
 
     acceptance: "49%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "head = [1,2,3,4,5], n = 2",
@@ -427,6 +439,8 @@ const linkedListQuestions = [
 
     acceptance: "63%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: "head = [1,2,3,4]",
         output: "[1,4,2,3]",
@@ -493,6 +507,8 @@ const linkedListQuestions = [
     time: "20-25 min",
 
     acceptance: "45%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "l1 = [2,4,3], l2 = [5,6,4]",
@@ -561,6 +577,8 @@ const linkedListQuestions = [
 
     acceptance: "66%",
 
+    amazonFrequency: "Medium",
+
     example1: {
         input: "head = [1,2,3,4]",
         output: "[2,1,4,3]",
@@ -627,6 +645,8 @@ const linkedListQuestions = [
     time: "30-35 min",
 
     acceptance: "60%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "head = [[7,null],[13,0],[11,4],[10,2],[1,0]]",
@@ -695,6 +715,8 @@ const linkedListQuestions = [
 
     acceptance: "55%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: "lists = [[1,4,5],[1,3,4],[2,6]]",
         output: "[1,1,2,3,4,4,5,6]",
@@ -761,6 +783,8 @@ const linkedListQuestions = [
     time: "40-50 min",
 
     acceptance: "63%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "head = [1,2,3,4,5], k = 2",
@@ -830,6 +854,8 @@ const linkedListQuestions = [
 
     acceptance: "44%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: '["LRUCache","put","put","get","put","get","put","get","get","get"]',
         output: "[null,null,null,1,null,-1,null,-1,3,4]",
@@ -897,6 +923,8 @@ const linkedListQuestions = [
 
     acceptance: "58%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: "head = [4,2,1,3]",
         output: "[1,2,3,4]",
@@ -963,6 +991,8 @@ const linkedListQuestions = [
     time: "40-50 min",
 
     acceptance: "61%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "head = [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]",

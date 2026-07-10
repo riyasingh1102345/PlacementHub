@@ -23,6 +23,25 @@ else if (module === "stack") {
 else if (module === "queue") {
     questions = queueQuestions;
 }
+else if (module === "trees") {
+    questions = treesQuestions;
+}
+else if (module === "binarySearch") {
+    questions = binarySearchQuestions;
+}
+else if (module === "heap") {
+    questions = heapQuestions;
+}
+else if (module === "greedy") {
+    questions = greedyQuestions;
+}
+else if (module === "backtracking") {
+    questions = backtrackingQuestions;
+}
+else if (module === "graphs") {
+    questions = graphsQuestions;
+}
+
 
 const question = questions.find(q => q.id === id);
 console.log(question);
@@ -83,6 +102,7 @@ document.getElementById("pattern").textContent = question.pattern;
 document.getElementById("difficulty").textContent = question.difficulty;
 document.getElementById("time").textContent = question.time;
 document.getElementById("acceptance").textContent = question.acceptance;
+document.getElementById("amazon-frequency").textContent = question.amazonFrequency;
 
 document.getElementById("problem-statement").textContent = question.problemStatement;
 
@@ -111,13 +131,16 @@ document.getElementById("time-complexity").textContent = question.timeComplexity
 document.getElementById("space-complexity").textContent = question.spaceComplexity;
 
 const hintsContainer = document.getElementById("hints-container");
-question.hints.forEach(function(hint) {
+
+question.hints.forEach(function(hint, index) {
+
     hintsContainer.innerHTML += `
-    <details>
-        <summary>💡 Hint</summary>
-        <p>${hint}</p>
-    </details>
+        <details>
+            <summary>💡 Hint ${index + 1}</summary>
+            <p>${hint}</p>
+        </details>
     `;
+
 });
 
 const bruteForce = document.getElementById("brute-force");

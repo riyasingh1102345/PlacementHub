@@ -39,12 +39,12 @@ ${
     isCompleted
     ? `
         <p class="completed-text">✅ Completed</p>
-        <a href="../problems.html?module=stack&id=${question.id}" class="solve-again">
+        <a href="../problems.html?module=queue&id=${question.id}" class="solve-again">
             Solve Again →
         </a>
       `
     : `
-        <a href="../problems.html?module=stack&id=${question.id}">
+        <a href="../problems.html?module=queue&id=${question.id}">
             Solve →
         </a>
       `
@@ -128,7 +128,21 @@ progressCount.textContent =
 
 const progressFill = document.getElementById("progress-fill");
 
+const completedQueueQuestions =
+    completedQuestions.filter(function(id){
+
+        return queueQuestions.some(function(question){
+
+            return question.id === id;
+
+        });
+
+    });
+
+progressCount.textContent =
+`${completedQueueQuestions.length} / ${queueQuestions.length} Questions`;
+
 const progressPercentage =
-    (completedQuestions.length / queueQuestions.length) * 100;
+(completedQueueQuestions.length / queueQuestions.length) * 100;
 
 progressFill.style.width = `${progressPercentage}%`;

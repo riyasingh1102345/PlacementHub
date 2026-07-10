@@ -9,6 +9,7 @@ const arrayQuestions = [
     pattern: "HashMap",
     time: "10-15 min",
     acceptance: "55%",
+    amazonFrequency: "Very High",
 
     companies: [
     "Amazon",
@@ -69,6 +70,7 @@ const arrayQuestions = [
     pattern: "HashSet",
     time: "5-10 min",
     acceptance: "61%",
+    amazonFrequency: "High",
 
     example1: {
         input: "nums = [1,2,3,1]",
@@ -131,6 +133,7 @@ const arrayQuestions = [
     pattern: "Greedy",
     time: "10-15 min",
     acceptance: "54%",
+    amazonFrequency: "Very High",
 
     example1: {
         input: "prices = [7,1,5,3,6,4]",
@@ -194,6 +197,7 @@ const arrayQuestions = [
     pattern: "Two Pointers",
     time: "10-15 min",
     acceptance: "62%",
+    amazonFrequency: "High",
 
     example1: {
         input: "nums = [0,1,0,3,12]",
@@ -257,6 +261,7 @@ const arrayQuestions = [
     pattern: "Prefix Sum",
     time: "10-15 min",
     acceptance: "58%",
+    amazonFrequency: "Medium",
 
     example1: {
         input: "nums = [1,7,3,6,5,6]",
@@ -322,6 +327,8 @@ const arrayQuestions = [
     time: "15-20 min",
 
     acceptance: "67%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "nums = [1,2,3,4]",
@@ -391,6 +398,8 @@ const arrayQuestions = [
     time: "20-25 min",
 
     acceptance: "65%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "nums = [1,1,1,2,2,3], k = 2",
@@ -462,6 +471,8 @@ k is in the range [1, number of unique elements].`,
 
     acceptance: "36%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: "nums = [-1,0,1,2,-1,-4]",
         output: "[[-1,-1,2],[-1,0,1]]",
@@ -531,6 +542,8 @@ k is in the range [1, number of unique elements].`,
 
     acceptance: "49%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: "nums = [100,4,200,1,3,2]",
         output: "4",
@@ -598,6 +611,8 @@ k is in the range [1, number of unique elements].`,
     time: "15-20 min",
 
     acceptance: "66%",
+
+    amazonFrequency: "High",
 
     example1: {
         input: "nums = [2,0,2,1,1,0]",
@@ -668,6 +683,8 @@ nums[i] is either 0, 1, or 2.`,
 
     acceptance: "64%",
 
+    amazonFrequency: "Very High",
+
     example1: {
         input: "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
         output: "6",
@@ -737,6 +754,8 @@ nums[i] is either 0, 1, or 2.`,
 
     acceptance: "42%",
 
+    amazonFrequency: "High",
+
     example1: {
         input: "nums = [1,2,0]",
         output: "3",
@@ -804,6 +823,8 @@ nums[i] is either 0, 1, or 2.`,
     time: "40-50 min",
 
     acceptance: "43%",
+
+    amazonFrequency: "Medium",
 
     example1: {
         input: "nums1 = [1,3], nums2 = [2]",
@@ -875,6 +896,8 @@ nums2.length == n
 
     acceptance: "41%",
 
+    amazonFrequency: "Medium",
+
     example1: {
         input: "nums = [1,2,3,2]",
         output: "14",
@@ -942,6 +965,8 @@ nums2.length == n
     time: "30-40 min",
 
     acceptance: "46%",
+
+    amazonFrequency: "Very High",
 
     example1: {
         input: "heights = [2,1,5,6,2,3]",
