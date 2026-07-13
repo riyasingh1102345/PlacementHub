@@ -1,0 +1,102 @@
+/* Education Page */
+
+.step-two{
+    width:28%;
+}
+
+.form-group textarea{
+    width:100%;
+    min-height:140px;
+    padding:18px;
+    border:1px solid #e4e6f5;
+    border-radius:16px;
+    background:#fff;
+    font-size:1rem;
+    font-family:"Inter",sans-serif;
+    color:#1d2441;
+    resize:vertical;
+    transition:.3s;
+    line-height:1.7;
+}
+
+.form-group textarea::placeholder{
+    color:#a0a7bf;
+}
+
+.form-group textarea:hover{
+    border-color:#cdc4ff;
+}
+
+.form-group textarea:focus{
+    outline:none;
+    border-color:#705dff;
+    box-shadow:0 0 0 4px rgba(112,93,255,.12);
+}
+
+.add-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:100%;
+    margin:10px 0 45px;
+    padding:16px;
+    border:2px dashed #d7d3ff;
+    border-radius:18px;
+    background:#faf9ff;
+    color:#705dff;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.add-btn:hover{
+    background:#f4f2ff;
+    border-color:#705dff;
+}
+
+.completed .step-number{
+    background:#22c55e;
+    border:none;
+    color:#fff;
+}
+
+.completed .step-text{
+    color:#1b2340;
+    font-weight:600;
+}
+
+.completed{
+    opacity:.9;
+}
+
+.completed:hover{
+    opacity:1;
+}
+
+.builder-actions{
+    margin-top:10px;
+}
+
+.secondary-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.primary-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+
+input[type="number"]{
+    appearance:textfield;
+}
