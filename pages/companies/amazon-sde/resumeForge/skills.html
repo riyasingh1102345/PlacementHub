@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/build-resume.css">
+
+</head>
+<body data-step="5">
+
+    <section class="builder">
+
+    <div class="container">
+
+        <div class="builder-box">
+
+            <aside class="builder-sidebar">
+
+                <h2>Resume<span>Forge</span></h2>
+
+                <ul class="steps-list">
+
+                    <li data-step="1">
+                 <span class="step-number">01</span>
+                <span class="step-text">Basic Details</span>
+                </li>
+
+<li data-step="2">
+    <span class="step-number">02</span>
+    <span class="step-text">Education</span>
+</li>
+
+<li data-step="3">
+    <span class="step-number">03</span>
+    <span class="step-text">Experience</span>
+</li>
+
+<li data-step="4">
+    <span class="step-number">04</span>
+    <span class="step-text">Projects</span>
+</li>
+
+<li data-step="5">
+    <span class="step-number">05</span>
+    <span class="step-text">Skills</span>
+</li>
+
+<li data-step="6">
+    <span class="step-number">06</span>
+    <span class="step-text">Achievements</span>
+</li>
+
+<li data-step="7">
+    <span class="step-number">07</span>
+    <span class="step-text">Finalize</span>
+</li>
+
+                </ul>
+
+            </aside>
+    
+    <main class="builder-content">
+
+    <div class="progress-area">
+
+        <p>Step 5 of 7</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:43%;"></div>
+        </div>
+
+    </div>
+
+    <h1>
+        Tell us about your
+        <span>work experience.</span>
+    </h1>
+
+    <p>
+        Add internships, jobs or freelance experience. You can always edit it later.
+    </p>
+    
+    <form>
+
+    <!-- TECHNICAL SKILLS  -->
+
+    <div class="skills-section">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Add the technologies you're comfortable working with.
+        </p>
+
+        <!-- Popular Skills -->
+
+        <div class="quick-skills">
+
+            <button type="button" class="quick-skill">Java</button>
+            <button type="button" class="quick-skill">Python</button>
+            <button type="button" class="quick-skill">C++</button>
+            <button type="button" class="quick-skill">JavaScript</button>
+            <button type="button" class="quick-skill">React</button>
+            <button type="button" class="quick-skill">Node.js</button>
+            <button type="button" class="quick-skill">Express.js</button>
+            <button type="button" class="quick-skill">MongoDB</button>
+            <button type="button" class="quick-skill">SQL</button>
+            <button type="button" class="quick-skill">Git</button>
+
+        </div>
+
+        <!-- Search Input -->
+
+        <div class="skill-input-box">
+
+            <input
+                type="text"
+                id="techSkillInput"
+                list="techSkillList"
+                placeholder="Search or type your own skill">
+
+            <button
+                type="button"
+                id="addTechSkill"
+                class="skill-add-btn">
+
+                + Add
+
+            </button>
+
+        </div>
+
+        <!-- Suggestions -->
+
+        <datalist id="techSkillList">
+
+            <option value="Java">
+            <option value="C++">
+            <option value="Python">
+            <option value="JavaScript">
+            <option value="TypeScript">
+            <option value="React">
+            <option value="Next.js">
+            <option value="Node.js">
+            <option value="Express.js">
+            <option value="MongoDB">
+            <option value="MySQL">
+            <option value="PostgreSQL">
+            <option value="Git">
+            <option value="GitHub">
+            <option value="Docker">
+            <option value="AWS">
+            <option value="Firebase">
+            <option value="Redis">
+            <option value="Tailwind CSS">
+            <option value="Bootstrap">
+
+        </datalist>
+
+        <!-- Selected Skills -->
+
+        <div
+            class="selected-skills"
+            id="techSkillsContainer">
+
+        </div>
+
+    </div>
+
+
+
+    <!--SOFT SKILLS-->
+
+    <div class="skills-section">
+
+        <h2 class="section-title">
+            Soft Skills
+        </h2>
+
+        <p class="section-subtitle">
+            Highlight your interpersonal strengths.
+        </p>
+
+        <!-- Quick Soft Skills -->
+
+        <div class="quick-skills">
+
+            <button type="button" class="quick-soft-skill">
+                Communication
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Leadership
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Teamwork
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Problem Solving
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Adaptability
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Time Management
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Critical Thinking
+            </button>
+
+            <button type="button" class="quick-soft-skill">
+                Creativity
+            </button>
+
+        </div>
+
+        <!-- Input -->
+
+        <div class="skill-input-box">
+
+            <input
+                type="text"
+                id="softSkillInput"
+                list="softSkillList"
+                placeholder="Search or type your own skill">
+
+            <button
+                type="button"
+                id="addSoftSkill"
+                class="skill-add-btn">
+
+                + Add
+
+            </button>
+
+        </div>
+
+        <!-- Suggestions -->
+
+        <datalist id="softSkillList">
+
+            <option value="Communication">
+            <option value="Leadership">
+            <option value="Teamwork">
+            <option value="Problem Solving">
+            <option value="Critical Thinking">
+            <option value="Adaptability">
+            <option value="Creativity">
+            <option value="Time Management">
+            <option value="Decision Making">
+            <option value="Presentation Skills">
+            <option value="Negotiation">
+            <option value="Collaboration">
+
+        </datalist>
+
+        <!-- Selected -->
+
+        <div
+            class="selected-skills"
+            id="softSkillsContainer">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Buttons -->
+
+    <div class="builder-actions">
+
+        <button
+            type="button"
+            class="back-btn">
+
+            <a href="./project.html">
+                ← Back
+            </a>
+
+        </button>
+
+        <button
+            type="submit"
+            class="continue-btn">
+
+            <a href="./achievements.html">Continue →</a>
+
+        </button>
+
+    </div>
+
+</form>
+
+</main>
+</div>
+</div>
+</section>
+
+<script src="./js/sidebar.js"></script>
+<script src="./js/skills.js"></script>
+
+</body>
+</html>

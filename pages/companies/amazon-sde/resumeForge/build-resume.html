@@ -14,7 +14,8 @@
 
 <link rel="stylesheet" href="./css/build-resume.css">
 </head>
-<body>
+
+<body data-step="1">
     
 <section class="builder">
 
@@ -26,39 +27,39 @@
 
                 <h2>Resume<span>Forge</span></h2>
 
-                <ul>
+                <ul class="steps-list">
 
-                    <li class="active">
-    <span class="step-number">01</span>
-    <span class="step-text">Basic Details</span>
-</li>
+                    <li data-step="1">
+                 <span class="step-number">01</span>
+                <span class="step-text">Basic Details</span>
+                </li>
 
-<li>
+<li data-step="2">
     <span class="step-number">02</span>
     <span class="step-text">Education</span>
 </li>
 
-<li>
+<li data-step="3">
     <span class="step-number">03</span>
     <span class="step-text">Experience</span>
 </li>
 
-<li>
+<li data-step="4">
     <span class="step-number">04</span>
     <span class="step-text">Projects</span>
 </li>
 
-<li>
+<li data-step="5">
     <span class="step-number">05</span>
     <span class="step-text">Skills</span>
 </li>
 
-<li>
+<li data-step="6">
     <span class="step-number">06</span>
     <span class="step-text">Achievements</span>
 </li>
 
-<li>
+<li data-step="7">
     <span class="step-number">07</span>
     <span class="step-text">Finalize</span>
 </li>
@@ -189,6 +190,8 @@
     </div>
 
 </section>
+
+<script src="./js/sidebar.js"></script>
 
 </body>
 </html>

@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body data-step="2">
 
 <section class="builder">
 
@@ -28,42 +28,42 @@
 
                 <h2>Resume<span>Forge</span></h2>
 
-                <ul>
+                <ul class="steps-list">
 
-                    <li class="completed">
-                        <span class="step-number">01</span>
-                        <span class="step-text">Basic Details</span>
-                    </li>
+                    <li data-step="1">
+                 <span class="step-number">01</span>
+                <span class="step-text">Basic Details</span>
+                </li>
 
-                    <li class="active">
-                        <span class="step-number">02</span>
-                        <span class="step-text">Education</span>
-                    </li>
+<li data-step="2">
+    <span class="step-number">02</span>
+    <span class="step-text">Education</span>
+</li>
 
-                    <li>
-                        <span class="step-number">03</span>
-                        <span class="step-text">Experience</span>
-                    </li>
+<li data-step="3">
+    <span class="step-number">03</span>
+    <span class="step-text">Experience</span>
+</li>
 
-                    <li>
-                        <span class="step-number">04</span>
-                        <span class="step-text">Projects</span>
-                    </li>
+<li data-step="4">
+    <span class="step-number">04</span>
+    <span class="step-text">Projects</span>
+</li>
 
-                    <li>
-                        <span class="step-number">05</span>
-                        <span class="step-text">Skills</span>
-                    </li>
+<li data-step="5">
+    <span class="step-number">05</span>
+    <span class="step-text">Skills</span>
+</li>
 
-                    <li>
-                        <span class="step-number">06</span>
-                        <span class="step-text">Achievements</span>
-                    </li>
+<li data-step="6">
+    <span class="step-number">06</span>
+    <span class="step-text">Achievements</span>
+</li>
 
-                    <li>
-                        <span class="step-number">07</span>
-                        <span class="step-text">Finalize</span>
-                    </li>
+<li data-step="7">
+    <span class="step-number">07</span>
+    <span class="step-text">Finalize</span>
+</li>
 
                 </ul>
 
@@ -189,48 +189,177 @@
                         <label>Description (Optional)</label>
 
                         <textarea
-                            rows="5"
+                            rows="3"
                             placeholder="Mention relevant coursework, academic achievements, extracurricular activities or anything worth highlighting."></textarea>
 
                     </div>
 
-                    <button
-                        type="button"
-                        class="add-btn">
+                    <div class="school-accordion" id="schoolAccordion">
 
-                        + Add Another Education
+    <div class="school-header" onclick="toggleSchool()">
 
-                    </button>
+        <div>
 
-                    <div class="builder-actions">
+            <h3>School Education (optional)</h3>
 
-                        <button
-                            type="button"
-                            class="secondary-btn">
+            <p>Add your Class 10 & Class 12 details</p>
 
-                            ← Back
+        </div>
 
-                        </button>
+        <span id="schoolArrow">+</span>
 
-                        <button
-                            type="submit"
-                            class="primary-btn">
+    </div>
 
-                            Continue →
+    <div class="school-content" id="schoolContent">
 
-                        </button>
+        <div class="education-card">
 
-                    </div>
+            <div class="card-heading">
 
-                </form>
+                <h2>Class 12</h2>
 
-            </main>
+                <p>Higher Secondary Education</p>
+
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>School Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="ABC Public School">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Board</label>
+
+                    <select>
+
+                        <option>Select Board</option>
+                        <option>CBSE</option>
+                        <option>ICSE</option>
+                        <option>State Board</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Percentage</label>
+
+                    <input
+                        type="text"
+                        placeholder="89%">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Passing Year</label>
+
+                    <input
+                        type="number"
+                        placeholder="2023">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="education-card">
+
+            <div class="card-heading">
+
+                <h2>Class 10</h2>
+
+                <p>Secondary Education</p>
+
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>School Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="ABC Public School">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Board</label>
+
+                    <select>
+
+                        <option>Select Board</option>
+                        <option>CBSE</option>
+                        <option>ICSE</option>
+                        <option>State Board</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Percentage</label>
+
+                    <input
+                        type="text"
+                        placeholder="92%">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Passing Year</label>
+
+                    <input
+                        type="number"
+                        placeholder="2021">
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
+</div>
+
+                 <div class="builder-actions">
+
+                        <button
+                            type="button"
+                            class="secondary-btn">
+                            <a href="./build-resume.html">Back </a>
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+                            <a href="./experience.html">Continue → </a>
+                        </button>
+
+                        </div>
+
 </section>
+
+<script src="./js/education.js"></script>
+<script src="./js/sidebar.js"></script>
 
 </body>
 </html>
