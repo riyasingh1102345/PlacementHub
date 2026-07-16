@@ -1,0 +1,318 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+    background:#eef2f7;
+    font-family:"Lato",sans-serif;
+    padding:40px;
+}
+
+
+
+/* Resume */
+
+.resume{
+    width:794px;
+    min-height:1123px;
+    margin:auto;
+    background:#fff;
+    padding:40px 50px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+
+
+/* Header */
+
+.resume-header{
+    text-align:center;
+    border-bottom:2px solid #4f46e5;
+    padding-bottom:24px;
+    margin-bottom:30px;
+}
+
+.resume-header h1{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:#111827;
+    text-transform:uppercase;
+}
+
+.designation{
+    margin-top:8px;
+    font-size:18px;
+    color:#4f46e5;
+    font-weight:700;
+}
+
+.contact-info{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:13px;
+    color:#4b5563;
+}
+
+.contact-info span{
+    line-height:1.6;
+}
+
+
+
+/* Sections */
+
+.resume-section{
+    margin-top:28px;
+    margin-bottom:10px;
+}
+
+.section-title{
+    font-size:15px;
+    text-transform:uppercase;
+    font-weight:800;
+    color:#4f46e5;
+    letter-spacing:1px;
+    padding-bottom:8px;
+    margin-bottom:18px;
+    border-bottom:1px solid #d6d9e4;
+}
+
+.resume-section p{
+    font-size:14px;
+    color:#374151;
+    line-height:1.8;
+}
+
+/* Education */
+
+.education-item{
+    margin-bottom:22px;
+}
+
+.education-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+}
+
+.education-header h3{
+    font-size:17px;
+    font-weight:700;
+    color:#111827;
+}
+
+.college{
+    margin-top:5px;
+    font-size:14px;
+    color:#6b7280;
+}
+
+.education-date{
+    font-size:14px;
+    font-weight:700;
+    color:#4f46e5;
+    white-space:nowrap;
+}
+
+.cgpa{
+    margin-top:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+/* Experience */
+
+.experience-item{
+    margin-bottom:28px;
+}
+
+.experience-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+}
+
+.experience-header h3{
+    font-size:17px;
+    font-weight:700;
+    color:#111827;
+}
+
+.company{
+    margin-top:5px;
+    font-size:14px;
+    color:#6b7280;
+    font-weight:600;
+}
+
+.experience-date{
+    white-space:nowrap;
+    font-size:14px;
+    font-weight:700;
+    color:#4f46e5;
+}
+
+.experience-points{
+    margin-top:14px;
+    margin-left:20px;
+}
+
+.experience-points li{
+    margin-bottom:8px;
+    font-size:14px;
+    color:#374151;
+    line-height:1.7;
+}
+
+/*projects*/
+
+.project-item{
+    margin-bottom:30px;
+}
+
+.project-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+}
+
+.project-header h3{
+    font-size:17px;
+    font-weight:700;
+    color:#111827;
+}
+
+.project-tech,
+.project-date{
+    color:#4f46e5;
+    font-size:13px;
+    font-weight:700;
+}
+
+.project-tech{
+    margin-top:6px;
+}
+
+.project-date{
+    white-space:nowrap;
+    font-size:14px;
+}
+
+.project-points{
+    margin:14px 0 0 20px;
+}
+
+.project-points li{
+    margin-bottom:8px;
+    font-size:14px;
+    line-height:1.7;
+    color:#374151;
+}
+
+.project-links{
+    margin-top:12px;
+    font-size:13px;
+    color:#374151;
+    word-break:break-word;
+}
+
+/*Skills*/
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    column-gap:70px;
+    row-gap:10px;
+    margin-top:12px;
+}
+
+.skill-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:.95rem;
+    color:#222;
+    line-height:1.4;
+}
+
+.skill-item::before{
+    content:"•";
+    font-size:1rem;
+    font-weight:700;
+    color:#222;
+}
+
+/*Acievements*/
+
+.achievement-list{
+    margin-left:20px;
+}
+
+.achievement-list li{
+    margin-bottom:8px;
+    font-size:14px;
+    line-height:1.7;
+    color:#374151;
+}
+
+.bottom-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+/*preview page*/
+
+.preview-page{
+    min-height:100vh;
+    background:#edf2f8;
+    padding:40px 0 60px;
+}
+
+.preview-header{
+    width:1000px;
+    margin:0 auto 35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.preview-header h2{
+    font-size:2rem;
+    color:#1d2441;
+    font-weight:700;
+}
+
+.preview-actions{
+    display:flex;
+    gap:16px;
+}
+
+.preview-body{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+@media print{
+    body{
+        background:white;
+        margin:0;
+    }
+
+    .resume{
+        box-shadow:none;
+    }
+}

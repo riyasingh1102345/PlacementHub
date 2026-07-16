@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Resume</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../css/build-resume.css">
+</head>
+
+<body data-step="1">
+    
+<section class="builder">
+
+    <div class="container">
+
+        <div class="builder-box">
+
+            <aside class="builder-sidebar">
+
+                <h2>Resume<span>Forge</span></h2>
+
+                <ul class="steps-list">
+
+                    <li data-step="1">
+                 <span class="step-number">01</span>
+                <span class="step-text">Basic Details</span>
+                </li>
+
+<li data-step="2">
+    <span class="step-number">02</span>
+    <span class="step-text">Education</span>
+</li>
+
+<li data-step="3">
+    <span class="step-number">03</span>
+    <span class="step-text">Experience</span>
+</li>
+
+<li data-step="4">
+    <span class="step-number">04</span>
+    <span class="step-text">Projects</span>
+</li>
+
+<li data-step="5">
+    <span class="step-number">05</span>
+    <span class="step-text">Skills</span>
+</li>
+
+<li data-step="6">
+    <span class="step-number">06</span>
+    <span class="step-text">Achievements</span>
+</li>
+
+<li data-step="7">
+    <span class="step-number">07</span>
+    <span class="step-text">Finalize</span>
+</li>
+
+                </ul>
+
+            </aside>
+
+            <main class="builder-content">
+
+                <div class="progress-area">
+
+                    <p>Step 1 of 7</p>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+                <h1>
+                    Let's start with your
+                    <span>basic details.</span>
+                </h1>
+
+                <p>
+                    Enter your personal information. You can always edit it later.
+                </p>
+
+                <form>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>Full Name</label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                placeholder="Riya Singh">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Email Address</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="riya@gmail.com">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Phone Number</label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                placeholder="+91 9876543210">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>College Location</label>
+
+                            <input
+                                type="text"
+                                id="collegeLocation"
+                                placeholder="Bareilly, Uttar Pradesh">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>LinkedIn</label>
+
+                            <input
+                                type="url"
+                                id="linkedin"
+                                placeholder="linkedin.com/in/yourprofile">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>GitHub</label>
+
+                            <input
+                                type="url"
+                                id="github"
+                                placeholder="github.com/username">
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Portfolio Website (Optional)</label>
+
+                        <input
+                            type="url"
+                            id="portfolio"
+                            placeholder="https://yourportfolio.com">
+
+                    </div>
+
+                    <div class="builder-actions">
+
+    <button
+        type="button"
+        class="secondary-btn"
+        id="saveDraftBtn">
+
+        Save Draft
+
+    </button>
+
+    <button
+        type="button"
+        class="primary-btn"
+        id="continueBtn">
+
+        Continue →
+
+    </button>
+
+</div>
+
+                </form>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="../js/common/sidebar.js"></script>
+<script src="../js/common/resumeData.js"></script>
+<script src="../js/pages/basic-details.js"></script>
+
+</body>
+</html>

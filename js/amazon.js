@@ -45,7 +45,7 @@ const roadmapData = [
         "ATS Keywords"
     ],
 
-     page:"./resumeforge/resumeforge.html",
+     page:"./resumeforge/pages/resumeforge.html",
 
     ready:"Your resume clearly highlights impact."
 },
